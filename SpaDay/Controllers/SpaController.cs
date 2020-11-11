@@ -28,7 +28,7 @@ namespace SpaDay.Controllers
                     return false;
                 }
             }
-
+            ViewBag.skin = skinType;
             return true;
 
         }
@@ -55,9 +55,15 @@ namespace SpaDay.Controllers
                     appropriateFacials.Add(facials[i]);
                 }
             }
+
+           
+            ViewBag.Person = name;
+            //ViewBag.Facials = facials;
+            ViewBag.AppropriateFacials = appropriateFacials;
+            ViewBag.Manipedi = manipedi;
             return View();
         }
 
-
+       
     }
 }
